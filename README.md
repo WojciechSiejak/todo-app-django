@@ -7,4 +7,4 @@ Functions:
 -Add a task
 -Delete task (with confirmation)
 -Editing a task
--Dark Mode - settings saved in LocalStorage Browser
+-Dark Mode - settings saved in LocalStorage Browser 

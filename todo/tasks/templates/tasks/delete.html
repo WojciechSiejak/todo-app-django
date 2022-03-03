@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container center-column">
+<h3>DELETE</h3>
+<p>Are you sure you want to delete "{{ item }}?"</p>
+
+<a href="{% url 'list' %}">CANCEL</a>
+
+<form method="POST" action="">
+{% csrf_token %}
+<input type="submit" name="Confirm">
+</form>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,44 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container center-column">
+    <h3>TO DO App</h3>
+    <div class="sub-container">
+
+
+
+        <form method="POST" action="/">
+            {% csrf_token %}
+            {{form.title}}
+            {{form.created}}
+            <input class="btn btn-info" type="submit" name="Create Task">
+        </form>
+        <div class="todo-list">
+            {% for task in tasks %}
+            <div class="task">
+            <div class="item-row">
+                <a class="btn btn-sm edit-button" href="{% url 'update_task' task.id %}"><img src="{% static 'editing.png' %}" alt=""></a>
+                <a class="btn btn-sm btn-danger delete-button" href="{% url 'delete' task.id %}"><img src="{% static 'bin.png' %}" alt=""></a>
+
+                {% if task.complete == True %}
+                <h3 class="task-title"><strike>{{task}}</strike></h3>
+                {% else %}
+            <h3 class="task-title">{{task}}</h3>
+
+                {% endif %}
+
+            </div>
+            <span class="day">{{task.created|date:'Y-m-d'}}</span>
+            <span class="hour">{{task.created|date:'H:i:s'}}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

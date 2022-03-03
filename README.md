@@ -5,6 +5,9 @@ A simple TODO application written using the Django framework and implemented Dar
 Functions:
 
 -Add a task
+
 -Delete task (with confirmation)
+
 -Editing a task
+
 -Dark Mode - settings saved in LocalStorage Browser 

@@ -1,1 +1,1 @@
-web: gunicorn todo-django-ws.wsgi:application --log-file -
+web: gunicorn todo-django-ws.wsgi

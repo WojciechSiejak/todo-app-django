@@ -1,1 +1,1 @@
-web: gunicorn todo-django-ws.wsgi
+web: gunicorn todo.wsgi

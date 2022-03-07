@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
+
 import dj_database_url
 
 
@@ -123,13 +123,6 @@ USE_TZ = True
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    BASE_DIR / "media",
-
-]
-STATIC_ROOT = "/static"
-MEDIA_ROOT = "/media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -137,4 +130,6 @@ MEDIA_ROOT = "/media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-django_heroku.settings(locals())
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())

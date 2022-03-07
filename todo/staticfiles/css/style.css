@@ -1,0 +1,167 @@
+body{
+    background-color:lightblue;
+}
+
+
+.sub-container{
+    width: 100%;
+    margin-inline: auto;
+    max-width: var(--chakra-sizes-container-md);
+    padding-inline: 1rem;
+    overflow: hidden;
+   
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.center-column
+{
+    width:600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(237, 241, 244);
+    border-radius: 3px;
+    box-shadow: 6px 2px 30px 0px rgba(0,0,0,0.75);
+}
+
+input
+{
+    width:100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input::placeholder{
+    color: lightgray
+}
+
+.btn-dange
+{
+    background-color: #ffae19;
+    border-color: #e59400;
+}
+
+.item-row
+{
+    background-color: #906abd;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0px -1px 10px -4px rgba(0,0,0,0.75);
+}
+
+.day{
+    background-color: rgb(84, 228, 185);
+    padding: 5px;
+    border-radius: 3px;
+    margin-left: 10px;
+    font-size:12px
+}
+.hour{
+    float:right;
+    margin-right:20px;
+    background-color: rgb(219, 240, 144);
+    padding: 5px;
+    border-radius: 3px;
+    font-size:12px
+}
+
+.task
+{
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+form
+{
+    margin-bottom: 20px;
+}
+
+a.delete-button
+{
+    float: right;
+    background-color: white;
+    border-color: #dc3545;
+}
+
+a.edit-button
+{
+    border-color: #dc3545;
+    background-color: white;
+}
+
+a.edit-button:hover
+{
+background-color: #2f9c38;
+}
+
+input#id_complete
+{
+    width: 30px;
+}
+
+
+.body-dark {
+    background-color: #303030;
+    color: white;
+    
+  }
+  
+
+
+  .dark-mode-container
+  {
+    background-color: #132d46
+  }
+  .input-dark
+  {
+      background-color: grey;
+  }
+  
+  .input2-dark
+  {
+    background-color: #6200ee;
+    color: white;
+    border: none;
+  }
+
+  .task-dark 
+  {
+      background-color: #BB86fc;
+  }
+
+  .day-dark
+  {
+    background-color: #084298;
+    color: white;
+
+  }
+
+  .hour-dark
+  {
+    background-color: black;
+    color: white;
+  }
+
+  .task-title
+  {
+    display: inline;
+    font-size: 20px;
+  }
+
+  .form-switch
+  {
+      float: right;
+  }
+
+  .form-check-label
+  {
+    font-weight: 700;
+    padding: 3px 10px;
+  }

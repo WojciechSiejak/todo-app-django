@@ -130,12 +130,11 @@ LOGIN_REDIRECT_URL = 'logged_in' # this is the name of the url
 STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 
-<<<<<<< HEAD
+
 STATICFILES_DIRS = [
     BASE_DIR / "static",  
 ]
-=======
->>>>>>> ec0545c6d542eee2685174b835f57d45ab21d75b
+
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field

@@ -1,5 +1,7 @@
 # Simple TODO App based on Django Framework
 
+https://todo-django-ws.herokuapp.com
+
 A simple TODO application written using the Django framework and implemented Dark Mode functionality.
 
 Functions:

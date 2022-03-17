@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import django_heroku
+
 import dj_database_url
 
 
@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     
-    'tasks'  
+    'tasks',
+    'ckeditor'  
 ]
 
 MIDDLEWARE = [
@@ -116,6 +117,12 @@ USE_I18N = True
 
 USE_TZ = True
 
+LOGIN_URL = 'login'
+
+LOGOUT_REDIRECT_URL = 'login' # this is the name of the url
+
+LOGIN_REDIRECT_URL = 'logged_in' # this is the name of the url
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
@@ -124,12 +131,8 @@ STATIC_URL = 'static/'
 MEDIA_URL = 'media/'
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
-    BASE_DIR / "media",
-
+    BASE_DIR / "static",  
 ]
-STATIC_ROOT = "/static"
-MEDIA_ROOT = "/media"
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -137,4 +140,6 @@ MEDIA_ROOT = "/media"
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-django_heroku.settings(locals())
+# Configure Django App for Heroku.
+import django_on_heroku
+django_on_heroku.settings(locals())

@@ -2,10 +2,11 @@
 
 {% block content %}
 <div class="container center-column">
+    <a class="go-back" href="{{ request.META.HTTP_REFERER }}">&#8592; Go back</a>
 <h3>DELETE</h3>
 <p>Are you sure you want to delete "{{ item }}?"</p>
 
-<a href="{% url 'list' %}">CANCEL</a>
+
 
 <form method="POST" action="">
 {% csrf_token %}

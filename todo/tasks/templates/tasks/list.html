@@ -3,17 +3,26 @@
 {% load static %}
 {% block content %}
 
+{% if request.user.is_authenticated %}
 
-<div class="container center-column">
-    <h3>TO DO App</h3>
+    
+    <a href="{% url 'logout' %}" type="button" class="btn btn-outline-info btn-rounded logout" data-mdb-ripple-color="dark">Logout</a>
+
+    {% else %}
+    
+    <a href="{% url 'login' %}" type="button" class="btn btn-outline-info btn-rounded login" data-mdb-ripple-color="dark">Login</a>
+{% endif %}
+
+
+<div class="container center-column update-column">
+    <h3 style="text-align:center">TO DO App with Notes</h3>
     <div class="sub-container">
 
 
 
         <form method="POST" action="/">
             {% csrf_token %}
-            {{form.title}}
-            {{form.created}}
+            {{form.as_p}}
             <input class="btn btn-info" type="submit" name="Create Task">
         </form>
         <div class="todo-list">
@@ -23,13 +32,14 @@
                 <a class="btn btn-sm edit-button" href="{% url 'update_task' task.id %}"><img src="{% static 'editing.png' %}" alt=""></a>
                 <a class="btn btn-sm btn-danger delete-button" href="{% url 'delete' task.id %}"><img src="{% static 'bin.png' %}" alt=""></a>
 
+                <a class="task-link" href="{% url 'update_task' task.id %}">
                 {% if task.complete == True %}
                 <h3 class="task-title"><strike>{{task}}</strike></h3>
                 {% else %}
-            <h3 class="task-title">{{task}}</h3>
+                <h3 class="task-title">{{task}}</h3>
 
                 {% endif %}
-
+                </a>
             </div>
             <span class="day">{{task.created|date:'Y-m-d'}}</span>
             <span class="hour">{{task.created|date:'H:i:s'}}</span>

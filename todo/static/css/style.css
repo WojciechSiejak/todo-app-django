@@ -157,11 +157,55 @@ input#id_complete
 
   .form-switch
   {
-      float: right;
+    top: 0px;
+    position: absolute;
+    right: 0px;
   }
 
   .form-check-label
   {
     font-weight: 700;
     padding: 3px 10px;
+  }
+
+  .update-column
+  {
+      width: 100%;
+      margin-top:50px;
+  }
+  .cke_editor_id_description
+  {
+      width: 100% !important;
+  }
+  .django-ckeditor-widget
+  {
+      width:100%;
+  }
+
+  a.task-link
+  {
+      text-decoration: none;
+      color: white;
+  }
+
+  .go-back
+  {
+      text-decoration: none;
+      border: white solid 1px;
+      border-radius: 5px;
+      padding: 10px;
+  }
+
+  .container > h3
+  { margin-top: 20px;}
+
+  .go-back:hover
+  {
+      background-color: white;
+      counter-reset: black;
+  }
+  .right
+  {
+      float: right;
+      margin-top: -10px;
   }

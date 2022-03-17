@@ -1,16 +1,25 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-<div class="container center-column">
+<div class="container center-column update-column">
+    <div class="navi">
+    <a class="go-back" href="{{ request.META.HTTP_REFERER }}">&#8592; Go back</a>
+    <a class="go-back right" href="{% url 'list' %}">&#8592; Back to list</a>
+</div>
 <h3>Update Task</h3>
+<a class="btn btn-sm btn-danger delete-button" href="{% url 'delete' item.id %}"><img src="{% static 'bin.png' %}" alt=""></a>
+
 
 <form method="POST" action="">
 {% csrf_token %}
 
-{{form}}   
+{{form.media}}   
+{{form.as_p}} 
 <input type="submit" name="Update Task">
 
 </form>
+
 </div>
 
 

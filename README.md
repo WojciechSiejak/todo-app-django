@@ -1,4 +1,4 @@
-# Simple TODO App based on Django Framework
+# Simple TODO with Notes App based on Django Framework
 ![todo-app](https://user-images.githubusercontent.com/34285362/203548349-0d10b757-24c6-4b90-961c-fb2c0ae34cfc.jpg)
 
 

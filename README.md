@@ -1,5 +1,7 @@
 # Simple TODO App based on Django Framework
-![todo-app](https://github.com/WojciechSiejak/todo-app-django/issues/2#issue-1461679115)
+![todo-app](https://user-images.githubusercontent.com/34285362/203548349-0d10b757-24c6-4b90-961c-fb2c0ae34cfc.jpg)
+
+
 ![todo-app](https://user-images.githubusercontent.com/34285362/203548133-5267757d-0a94-44cd-9c84-b72d8cc094ec.jpg)
 
 U can register user or use:

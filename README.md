@@ -1,4 +1,6 @@
 # Simple TODO App based on Django Framework
+![todo-app](https://user-images.githubusercontent.com/34285362/203548133-5267757d-0a94-44cd-9c84-b72d8cc094ec.jpg)
+
 U can register user or use:
 
 Login: admin1

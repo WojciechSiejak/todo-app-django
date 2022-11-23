@@ -1,4 +1,7 @@
 # Simple TODO App based on Django Framework
+U can register user or use:
+Login: admin1
+pass: test2022
 
 https://todo-django-ws.herokuapp.com
 
